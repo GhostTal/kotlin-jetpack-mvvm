@@ -9,9 +9,10 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.example.baselib.base.BaseVmActivity
 import com.example.basicstructure.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseVmActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -32,6 +33,14 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    override fun getLayoutId(): Int? {
+       return R.layout.activity_main
+    }
+
+    override fun init(savedInstanceState: Bundle?) {
+        TODO("Not yet implemented")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
