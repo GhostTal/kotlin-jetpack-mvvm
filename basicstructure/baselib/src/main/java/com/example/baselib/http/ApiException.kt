@@ -1,9 +1,9 @@
 package com.example.baselib.http
 
-import java.io.IOException
+import java.lang.Exception
 
 /**
- * used for logging error message
+ * 用来封装业务错误信息
  * */
-class ApiException(val businessMessage: String, val businessCode: Int) : IOException() {
+class ApiException(val errorMessage: String, val errorCode: Int) : Exception() {
 }
