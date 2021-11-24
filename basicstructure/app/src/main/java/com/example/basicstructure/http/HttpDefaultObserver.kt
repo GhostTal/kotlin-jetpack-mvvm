@@ -12,13 +12,13 @@ import java.net.UnknownHostException
  * des 给Response脱壳,对服务器错误统一处理
  *
  */
-abstract class HttpDefaultObserver<T> : io.reactivex.Observer<BaseResponse<T>> {
+abstract class HttpDefaultObserver<T> : io.reactivex.Observer<ApiResponse<T>> {
 
     override fun onComplete() {
     }
 
 
-    override fun onNext(t: BaseResponse<T>) {
+    override fun onNext(t: ApiResponse<T>) {
         if (t.errorCode==0) {
 
             if (t.data==null){
@@ -43,7 +43,7 @@ abstract class HttpDefaultObserver<T> : io.reactivex.Observer<BaseResponse<T>> {
         } else if (e is ConnectException) {
             "连接错误"
         } else if (e is ApiException){
-            e.businessMessage
+            e.errorMessage
         } else{
             "未知错误"
         }
