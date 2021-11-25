@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/main_fragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.basicstructure.ui.main.MainFragment">
+        <action
+            android:id="@+id/action_main_fragment_to_home_fragment" />
+        <action
+            android:id="@+id/action_mainfragment_to_mine_fragment" />
+        <action
+            android:id="@+id/action_mainfragment_to_project_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.basicstructure.ui.main.home.HomeFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mine_fragment"
+        android:name="com.example.basicstructure.ui.main.mine.MineFragment">
+
+    </fragment>
+
+</navigation>
