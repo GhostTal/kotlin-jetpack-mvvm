@@ -25,7 +25,7 @@ typealias VmError =  (e: ApiException) -> Unit
 /**
  * 基础VM
  */
-class BaseViewModel : ViewModel() {
+open class BaseViewModel : ViewModel() {
 
 
     /**
